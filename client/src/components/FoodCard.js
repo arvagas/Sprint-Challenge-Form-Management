@@ -8,8 +8,8 @@ const FoodCard = ({ food }) => {
             <p>Technique: {food.technique}</p>
             <div>
                 Ingredients:
-                {food.ingredients.map(ing => (
-                    <span> {ing},</span>
+                {food.ingredients.map((ing, index) => (
+                    <span key={index}> {ing},</span>
                 ))}
             </div>
         </div>

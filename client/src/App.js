@@ -11,8 +11,8 @@ function App() {
       <FormikForm foods={foods} setFoods={setFoods}/>
 
       <div>
-        {foods.map(food => (
-          <FoodCard key={Date.now()} food={food} />
+        {foods.map((food, index) => (
+          <FoodCard key={`${index}${Date.now()}`} food={food} />
         ))}
       </div>
     </div>
