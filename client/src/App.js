@@ -3,11 +3,13 @@ import React, { useState } from 'react'
 import FormikForm from './components/InputForm'
 import FoodCard from './components/FoodCard'
 
+import { Container } from './StyledComps'
+
 function App() {
   const [foods, setFoods] = useState([])
 
   return (
-    <div>
+    <Container>
       <FormikForm foods={foods} setFoods={setFoods}/>
 
       <div>
@@ -15,7 +17,7 @@ function App() {
           <FoodCard key={`${index}${Date.now()}`} food={food} />
         ))}
       </div>
-    </div>
+    </Container>
   )
 }
 

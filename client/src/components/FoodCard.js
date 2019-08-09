@@ -1,8 +1,10 @@
 import React from 'react'
 
+import { StyledFoodCard } from '../StyledComps'
+
 const FoodCard = ({ food }) => {
     return (
-        <div>
+        <StyledFoodCard>
             <h2>{food.name}</h2>
             <p>Course: {food.course}</p>
             <p>Technique: {food.technique}</p>
@@ -12,7 +14,7 @@ const FoodCard = ({ food }) => {
                     <span key={index}> {ing},</span>
                 ))}
             </div>
-        </div>
+        </StyledFoodCard>
     )
 }
 
